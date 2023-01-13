@@ -38,7 +38,17 @@ function modelLoaded(){
 function draw() {
 	game()
 	background("#470a80");
+	if(noseX < 300){
+		marioX = marioX-1;
+	}
+	if(noseX >300){
+		marioX = marioX+1;
+	}>
+	if(noseY > 150){
+		marioY = marioY+1;
+	}
 	Image(img,marioX, marioY, 40, 70);
+
 }
 
 
