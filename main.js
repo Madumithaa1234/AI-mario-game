@@ -16,9 +16,11 @@ function setup() {
 	canvas.parent('canvas');
 	instializeInSetup(mario);
 	video = createCapture(VIDEO);
-	video.size(600, 300);
+	video.size(800, 400);
+	video.parent('game_console');
 	poseNet = ml5.poseNet(video, modelLoaded);
 	poseNet.on('pose', gotPoses);
+
 }
 
 function gotposes(results){
@@ -43,7 +45,7 @@ function draw() {
 	}
 	if(noseX >300){
 		marioX = marioX+1;
-	}>
+	}
 	if(noseY > 150){
 		marioY = marioY+1;
 	}
